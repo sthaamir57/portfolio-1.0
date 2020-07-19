@@ -1,0 +1,121 @@
+.contentAbout{
+    flex-flow: column;
+}
+
+@media(max-width:850px)
+{
+    /* Reset */
+.btnContact,.btnWork,#about{
+    transition-property: none;
+}
+
+/* Small Screen */
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+/* burger menu */
+#navMob2{
+    display: none;
+}
+/* .menuWrap .menu{
+    width: 75vw;
+}
+
+.menuWrap .menu > div{
+    transform: translateX(75vw);
+}
+
+.menuWrap .menu > div{
+    background-color: rgba(8, 8, 8, 0.63);
+} */
+
+#navMob{
+    display: flex;
+    /* display: none; */
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(212, 28, 28, 0.842);
+    color: white;
+    font-size: 1rem;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+}
+
+#navMob a{
+    padding: 0.7rem 1.7rem;
+}
+
+#nav{
+    display: none;
+}
+.logoMob{
+    display: flex;
+}
+
+.logoTop{
+    position: relative;
+}
+
+.logoTop a img{
+    width: 60px;
+}
+
+.aboutMe{
+    padding: 0 0 2rem;
+    margin: 0.2rem;
+}
+
+.py-4{
+    padding: 1rem 0 0;
+}
+
+.contentWorks{
+    padding: 5rem 1.8rem;
+}
+
+.box{
+    height: 100px;
+    flex-basis: 150px;
+    margin: 0.3rem;
+}
+
+.contentContact{
+    flex-direction: column;
+    padding: 5rem 1.8rem 4rem;
+}
+
+.link{
+    flex-direction: column;
+}
+
+.ls{
+    border-bottom: 1px solid #fff;
+}
+
+.contentAbout{
+    flex-direction: column;
+    padding: 4rem;
+}
+
+.text1{
+    font-size: 4rem;
+}
+
+.text2{
+    font-size: 1.4rem;
+}
+
+}
+
+
+@media(max-width:380px)
+{
+    .box{
+        height: 100px;
+        flex-basis: 130px;
+        margin: 0.2rem;
+    }
+}

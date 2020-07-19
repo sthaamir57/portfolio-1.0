@@ -1,0 +1,138 @@
+.menuWrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.menuWrap .check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  opacity: 0;
+}
+.menuWrap .burger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  height: 60px;
+  width: 60px;
+  padding: 1rem;
+  background: rgba(56, 56, 56, 0.342);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+}
+
+.menuWrap .burger > div {
+  position: relative;
+  flex: none;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.menuWrap .burger > div::before,
+.menuWrap .burger > div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background-color: inherit;
+}
+
+.menuWrap .burger > div::before {
+  top: 10px;
+}
+
+/* Animantion */
+.menuWrap .check:checked + .burger > div {
+  transform: rotate(135deg);
+}
+
+.menuWrap .check:checked + .burger > div::before,
+.menuWrap .check:checked + .burger > div::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.menuWrap .menu {
+  /* background-color: rgba(34, 34, 34, 0.644); */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20vw;
+  /* visibility: hidden; */
+  /* transform: translateX(100%); */
+  opacity: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: all 0.4s ease;
+}
+
+.menuWrap .menu > div {
+  background-color: rgba(24, 24, 24, 0.63);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* transform: translateX(50vw); */
+}
+
+.menuWrap .menu > div > div {
+  text-align: center;
+  max-width: 25vw;
+  max-height: 100vh;
+  /* opacity: 0; */
+  transition: opacity 0.4s ease;
+}
+
+.menuWrap .menu > div > div > ul > li {
+  list-style: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menuWrap .menu > div > div > ul > li > a {
+  color: inherit;
+  transition: color 0.4s ease;
+}
+
+.menuWrap .menu > div > div > ul > li > a:hover {
+  color: red;
+}
+
+/* Rotate On Hover When Checked */
+.menuWrap .check:checked:hover + .burger > div {
+  transform: rotate(225deg);
+}
+
+.menuWrap .check:checked ~ .menu {
+  /* visibility: visible; */
+  opacity: 1;
+  transform: translateX(0);
+  transition-duration: 0.45s;
+}
+
+/* .menuWrap .check:checked ~ .menu > div {
+  transform: translateX(0);
+  transition-duration: 0.45s;
+} */
